@@ -1,0 +1,11 @@
+python -m optreg.train_cifar
+    --dataset cifar100\
+    --opt sgd --lr '[(0.1, 1000000)]' --steps --lrfunc invsqrt\
+    --fast\
+    --k $MODEL_WIDTH\
+    --noise 0.0\
+    --clean_test\
+    --model mCNNk_bn\
+    --loss_thresh 0.0\
+    --decay $WEIGHT_DECAY\
+    --nSamps 50000
